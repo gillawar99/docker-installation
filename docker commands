@@ -1,0 +1,16 @@
+docker container run -dt --name nginx-container nginx
+# here we are creating a container with image nginx
+# nginx-container is the name of the container and nginx is the image name
+
+# we can create our custom own images for that we need to create a docker file[set to instructions that makes up the image]
+  instructions for a sample node application:
+      FROM node:16              -it is a base image
+      RUN  mkdir /doc-prac      -creating a folder inside the container to store code
+      WORKDIR /doc-prac         -creating a path
+      COPY . /doc-prac          -copying the code from the current working directory to the folder which is in the container
+      RUN npm install
+      RUN npx prisma generate   -build commands
+      RUN npm run build
+      EXPOSE                    -allowing the traffic
+      CMD ["npm", "start"]      -This instructs Docker to run the command npm start when the container starts.
+  #CMD -is used to specify the default command that should be executed when a container is run from a image 
