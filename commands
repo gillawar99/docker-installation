@@ -1,2 +1,11 @@
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
+
+#now create docker group and add the user. for ubuntu the user name will be the ubuntu.
+sudo usermod -aG <group> <user-name>
+sudo usermod -aG docker ubuntu
+#now logut and login
+
+#to configure docker registry create a access token and follow the command shown there.
+
+
