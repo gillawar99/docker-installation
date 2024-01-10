@@ -3,7 +3,7 @@ docker container run -dt --name nginx-container nginx
 # nginx-container is the name of the container and nginx is the image name
 
 # we can create our custom own images for that we need to create a docker file[set to instructions that makes up the image]
-  instructions for a sample node application(backend):
+  dockerfile for a sample node application(backend):
       FROM node:16              -it is a base image
       RUN  mkdir /doc-prac      -creating a folder inside the container to store code
       WORKDIR /doc-prac         -creating a path
