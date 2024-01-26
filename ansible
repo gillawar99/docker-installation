@@ -1,0 +1,15 @@
+sudo apt update -y
+sudo apt install ansible -y
+inventory location - /etc/ansible/hosts
+ansible -m ping all - this will lists all nodes
+ansible <nodename> -m setup ---to know the node information
+scp -i key.pem key.pem ubuntu@masterIP :~ --- this will copy server key from node to master if we enter this command on any worker node
+use:
+apt module to install any web server, to update the system
+file module to create, delete or remove file
+git module to deploy a code
+copy to copy files
+service to restart nginx or any web server
+
+
+we use condition if we are using multiple types of machines 
