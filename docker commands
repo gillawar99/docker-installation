@@ -14,3 +14,4 @@ docker container run -dt --name nginx-container nginx
       EXPOSE                    -allowing the traffic
       CMD ["npm", "start"]      -This instructs Docker to run the command npm start when the container starts.
   #CMD -is used to specify the default command that should be executed when a container is run from a image 
+  #RUn -is used to execute commands during the image build process
